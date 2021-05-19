@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+}
+
+.stats{
+    background-color: rgb(19, 90, 114);
+    height: 100px;
+    width:176px;
+    margin:auto;
+}
+
+/* .board {
+    background-color: lightblue;
+    width: 200px
+} */
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.cell img {
+    width: 15px;
+    height: auto
+}
+
+table {
+    margin: auto;
+    background-color: lightblue;
+}
+
+td {
+    border: 0.1px solid black;
+    text-align: center;
+    margin: 0px;
+}
+
+.clicked {
+    background-color:gray
+}
