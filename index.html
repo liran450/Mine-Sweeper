@@ -9,11 +9,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="init()">
-    <div class="stats">
-        <h2><span class="life"></span><span class="smiley"></span><span class="timer"></span></h2>
-    </div>
-    <div class="board">
+<body onload="init()" oncontextmenu="return false;">
+    <div class="container">
+        <div class="stats">
+            <h2>
+                <span class="life"></span>
+                <span class="smiley" onclick="restartGame(this)">😁</span>
+                <span class="stop-watch" onclick='findBestScore()'>00:00:00</span>
+            </h2>
+            <div class="levels">
+                <label for="easy(4x4)">Easy</label>
+                <input onclick="chooseLevel(this)" type="radio" name="choice" value="easy(4x4)">
+                <label for="hard(8x8)">Hard</label>
+                <input onclick="chooseLevel(this)" type="radio" name="choice" value="hard(8x8)">
+                <label for="super(12x12)">Super</label>
+                <input onclick="chooseLevel(this)" type="radio" name="choice" value="super(12x12)">
+            </div>
+        </div>
+        <div class="board">
+        </div>
+        <div class="featurs">
+            <span class="hint" onclick="hintActivate()">Hints:</span> |
+            <span class="safe-click" onclick="safeClick()">Safe Clicks:</span> |
+            <span class="undo" onclick="undo()">Undo</span>
+        </div>
+        <div class="mine-clicked hide">
+            <h3><span class="life-left-message"></span> Life:</h3>
+        </div>
+        <div>
+            <h2 class="win-message hide">You Won!</h2>
+        </div>
+        <div class="best-score"></div>
+        <div class="restart hide"><button onclick="restartGame()">Restart Game</button></div>
     </div>
     <script src="js/main.js"></script>
 </body>

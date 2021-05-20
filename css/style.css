@@ -2,11 +2,15 @@ body {
     text-align: center;
 }
 
-.stats{
-    background-color: rgb(19, 90, 114);
-    height: 100px;
-    width:176px;
+.container {
+    width: auto;
     margin:auto;
+    background-color: rgb(98, 98, 173)
+}
+
+.stats {
+    background-color: rgb(19, 90, 114);
+    margin: auto;
 }
 
 /* .board {
@@ -15,8 +19,8 @@ body {
 } */
 
 .cell {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     text-align: center;
     font-size: 1.5em;
 }
@@ -24,6 +28,25 @@ body {
 .cell img {
     width: 15px;
     height: auto
+}
+
+.hint, .safe-click, .smiley, .undo {
+    cursor: pointer;
+    color: rgba(237, 244, 245, 0.986);
+}
+
+.levels {
+    background-color: rgb(26, 122, 200);
+
+    margin: auto;
+}
+
+label {
+    color: rgba(237, 244, 245, 0.986);
+}
+
+input {
+    cursor: pointer;
 }
 
 table {
@@ -38,5 +61,21 @@ td {
 }
 
 .clicked {
-    background-color:gray
+    background-color: gray
+}
+
+.restart {
+    left: 0;
+    right: 0;
+}
+
+.restart button {
+    background-color: rgb(51, 87, 206);
+    color: white;
+    border: 1px solid green;
+    font-size: 30px;
+}
+
+.hide {
+    display: none
 }
