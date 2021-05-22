@@ -19,7 +19,7 @@
             </h2>
             <div class="levels">
                 <label for="easy(4x4)">Easy</label>
-                <input onclick="chooseLevel(this)" type="radio" name="choice" value="easy(4x4)">
+                <input onclick="chooseLevel(this)" type="radio" name="choice" value="easy(4x4)" checked>
                 <label for="hard(8x8)">Hard</label>
                 <input onclick="chooseLevel(this)" type="radio" name="choice" value="hard(8x8)">
                 <label for="super(12x12)">Super</label>
@@ -31,7 +31,8 @@
         <div class="featurs">
             <span class="hint" onclick="hintActivate()">Hints:</span> |
             <span class="safe-click" onclick="safeClick()">Safe Clicks:</span> |
-            <span class="undo" onclick="undo()">Undo</span>
+            <span class="undo" onclick="undo()">Undo</span> |
+            <span class='manual' onclick="manualMode()">Click for Manual mode</span>
         </div>
         <div class="mine-clicked hide">
             <h3><span class="life-left-message"></span> Life:</h3>
@@ -39,7 +40,7 @@
         <div>
             <h2 class="win-message hide">You Won!</h2>
         </div>
-        <div class="best-score"></div>
+        <div><span class="best-score"></span></div>
         <div class="restart hide"><button onclick="restartGame()">Restart Game</button></div>
     </div>
     <script src="js/main.js"></script>

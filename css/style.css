@@ -30,7 +30,7 @@ body {
     height: auto
 }
 
-.hint, .safe-click, .smiley, .undo {
+.hint, .safe-click, .smiley, .undo, .manual {
     cursor: pointer;
     color: rgba(237, 244, 245, 0.986);
 }
@@ -74,8 +74,12 @@ td {
     color: white;
     border: 1px solid green;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .hide {
     display: none
+}
+.red {
+    background-color:rgb(163, 17, 17)
 }
