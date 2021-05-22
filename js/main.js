@@ -33,7 +33,6 @@ function init() {
     var mines = gLevel.mines
     gBoard = buildBoard(length, mines)
     renderBoard(gBoard)
-    showBestScore()
 }
 
 
@@ -62,11 +61,13 @@ function renderBoard() {
             var currCell = gBoard[i][j];
             var tdId = `cell-${i}-${j}`;
             var clicked = (currCell.isShown && !currCell.isMine) ? 'clicked' : ''
+            var mineClicked = (currCell.isShown && currCell.isMine) ? 'red' : ''
 
-            strHTML += `<td id="${tdId}" class="cell ${clicked}" onclick="cellClicked(this, true)" 
+            strHTML += `<td id="${tdId}" class="cell ${clicked} ${mineClicked}" onclick="cellClicked(this, true)" 
             oncontextmenu="flagCell(this)" >\n`
 
             if (currCell.isShown && currCell.isMine) {
+                // if (!elCell.classList.contains('red')) elCell.classList.add('red');
                 strHTML += MINE_IMG;
             } else if (currCell.isShown && currCell.minesAroundCount) {
                 strHTML += currCell.minesAroundCount;
@@ -193,6 +194,7 @@ function cellClicked(elCell, isFirstClicked) {
         if (!elCell.classList.contains('clicked')) elCell.classList.add('clicked');
         renderCell(elCell, mineCount);
     } else if (currCell.isShown && currCell.isMine) {
+        if (!elCell.classList.contains('red')) elCell.classList.add('red');
         renderCell(elCell, MINE_IMG);
         gGame.life--;
         renderSmiley();
@@ -286,10 +288,6 @@ function renderSmiley() {
     if (gGame.life === 3) elSmileySpan.innerText = '😁';
     if (gGame.life < 3) elSmileySpan.innerText = '😅';
     if (!gGame.life) elSmileySpan.innerText = '💀';
-}
-
-function expandShown(board, elCell, i, j) {
-
 }
 
 function GameStats() {

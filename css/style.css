@@ -1,11 +1,13 @@
 body {
     text-align: center;
+    background-color:rgb(247, 224, 189);
 }
 
 .container {
     width: auto;
     margin:auto;
-    background-color: rgb(98, 98, 173)
+    background-color: rgb(98, 98, 173);
+    border: 5px solid rgb(0, 0, 0);
 }
 
 .stats {
@@ -13,10 +15,6 @@ body {
     margin: auto;
 }
 
-/* .board {
-    background-color: lightblue;
-    width: 200px
-} */
 
 .cell {
     width: 30px;
@@ -58,6 +56,7 @@ td {
     border: 0.1px solid black;
     text-align: center;
     margin: 0px;
+    cursor: pointer;
 }
 
 .clicked {
@@ -80,6 +79,16 @@ td {
 .hide {
     display: none
 }
+
 .red {
-    background-color:rgb(163, 17, 17)
+    background-color:rgb(219, 12, 12)
+}
+
+h3 {
+background-color:rgb(96, 124, 184);
+width: 300px;
+margin:30px auto;
+color: white;
+border: 6px dashed rgb(19, 90, 114);
+border-radius: 10px;
 }
